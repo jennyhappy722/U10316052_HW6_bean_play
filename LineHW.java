@@ -16,7 +16,13 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
-
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.value.WritableObjectValue;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import java.util.*;
 //class
 public class LineHW extends Pane{
 	
@@ -76,6 +82,15 @@ public class LineHW extends Pane{
 		Ellipse e27=new Ellipse(160,90,5,5);
 
 		Ellipse e28=new Ellipse(150,72,5,5);
+		
+		Circle r1 = new Circle(150,160,2);
+		Circle r2 = new Circle(120,180,2);
+		Circle r3 = new Circle(140,180,2);
+		Circle r4 = new Circle(160,180,2);
+		Circle r5 = new Circle(180,180,2);
+		Circle r6 = new Circle(200,180,2);
+		Circle r7 = new Circle(220,180,2);
+		Circle r8 = new Circle(220,180,2);		
 
 		e1.setFill(Color.BLACK);
 		//add to pane
@@ -91,13 +106,276 @@ public class LineHW extends Pane{
     		animation.setCycleCount(Timeline.INDEFINITE);
    		animation.play(); // Start animation
 	}
+	public void rootu(){
+		int r = new Random().nextInt(2)+1;
+		r1=D1;
+		//---------------------------------------------------------------------r1
+		if(r==2)
+			r2=D2;
+		else
+			r2=D3;
+		
+		//---------------------------------------------------------------------r2
+		if(r2==D2){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r3=D4;
+			else
+				r3=D5;
+		}
 
-	public void moviecirle(){
+		if(r2==D3){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r3=D5;
+			else
+				r3=D6;
+		}
 
-		x++;
-		y++;
-		circle.setCenterX(x);
-		circle.setCenterY(y);
+		//---------------------------------------------------------------------r3
+		if(r3==D4){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r4=D7;
+			else
+				r4=D8;
+		}
+
+		if(r3==D5){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r4=D9;
+			else
+				r4=D8;
+		}
+
+		if(r3==D6){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r4=D9;
+			else
+				r4=D10;
+		}
+		//---------------------------------------------------------------------r4
+		if(r4==D7){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r5=D11;
+			else
+				r5=D12;
+		}
+
+		if(r4==D8){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r5=D13;
+			else
+				r5=D12;
+		}
+
+		if(r4==D9){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r5=D13;
+			else
+				r5=D14;
+		}
+
+		if(r4==D10){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r5=D14;
+			else
+				r5=D15;
+		}
+		//---------------------------------------------------------------------r5
+		if(r5==D11){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r6=D16;
+			else
+				r6=D17;
+		}
+
+		if(r5==D12){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r6=D18;
+			else
+				r6=D17;
+		}
+
+		if(r5==D13){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r6=D18;
+			else
+				r6=D19;
+		}
+
+		if(r5==D14){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r6=D19;
+			else
+				r6=D20;
+		}
+
+		if(r5==D15){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r6=D20;
+			else
+				r6=D21;
+		}
+		
+		//---------------------------------------------------------------------r6
+		if(r6==D16){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r7=D22;
+			else
+				r7=D23;
+		}
+
+		if(r6==D17){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r7=D24;
+			else
+				r7=D23;
+		}	
+
+		if(r6==D18){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r7=D24;
+			else
+				r7=D25;
+		}	
+
+		if(r6==D19){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r7=D25;
+			else
+				r7=D26;
+		}	
+
+		if(r6==D20){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r7=D26;
+			else
+				r7=D27;
+		}	
+
+		if(r6==D21){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r7=D27;
+			else
+				r7=D28;
+		}
+		//---------------------------------------------------------------------r7
+		if(r7==D22){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D29;
+			else
+				r8=D30;
+		}
+
+		if(r7==D23){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D31;
+			else
+				r8=D30;
+		}
+
+		if(r7==D24){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D31;
+			else
+				r8=D32;
+		}
+
+		if(r7==D25){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D32;
+			else
+				r8=D33;
+		}
+
+		if(r7==D26){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D33;
+			else
+				r8=D34;
+		}
+
+		if(r7==D27){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D35;
+			else
+				r8=D34;
+		}
+
+		if(r7==D28){
+			r = new Random().nextInt(2)+1;
+			if(r==2)
+				r8=D35;
+			else
+				r8=D36;
+		}			
 		
 	}
+
+	public Circle getr1(){
+
+		return r1;
+	}
+
+	public Circle getr2(){
+
+		return r2;
+	}
+
+
+	public Circle getr3(){
+
+		return r3;
+	}
+
+	public Circle getr4(){
+
+		return r4;
+	}
+
+	public Circle getr5(){
+
+		return r5;
+	}
+
+	public Circle getr6(){
+
+		return r6;
+	}
+
+	public Circle getr7(){
+
+		return r7;
+	}
+
+	public Circle getr8(){
+
+		return r8;
+	}
+
+
 }
