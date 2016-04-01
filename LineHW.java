@@ -173,11 +173,7 @@ public class LineHW extends Pane{
     		pathtransition.play();
 	}
 
-	public void pplaying(){
-		rootu();	
-		animation1();
-
-	}	
+	
 	//path random
 	public void rootu(){
 		int r = new Random().nextInt(2)+1;
