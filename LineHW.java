@@ -1,28 +1,18 @@
 //u10316052
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
-import javafx.scene.shape.Line;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.*;
 import javafx.util.*;
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
-import javafx.beans.property.DoubleProperty;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.util.Duration;
 import javafx.beans.binding.Bindings;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.*;
 import javafx.beans.value.WritableObjectValue;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
+import javafx.animation.*;
 import java.util.*;
+import javafx.event.*;
 //class
 public class LineHW extends Pane{
 	
@@ -92,7 +82,6 @@ public class LineHW extends Pane{
 		Circle r7 = new Circle(220,180,2);
 		Circle r8 = new Circle(220,180,2);		
 
-		e1.setFill(Color.BLACK);
 		//add to pane
 		getChildren().addAll(circle,line,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28);
 
@@ -100,11 +89,23 @@ public class LineHW extends Pane{
 
 	public void animation1(){
     		// Create an animation for moving the ball
-    		animation = new Timeline(
-    		new KeyFrame(Duration.millis(10), e -> moviecirle()));
-		new KeyFrame(
-    		animation.setCycleCount(Timeline.INDEFINITE);
-   		animation.play(); // Start animation
+    		Path path = new Path();
+    		path.getElements().add(new MoveTo(circle.getCenterX(),circle.getCenterY()));//起始點
+   		path.getElements().add(new LineTo(r1.getCenterX(), r1.getCenterY()));
+		path.getElements().add(new LineTo(r2.getCenterX(), r2.getCenterY()));
+   		path.getElements().add(new LineTo(r3.getCenterX(), r3.getCenterY()));
+		path.getElements().add(new LineTo(r4.getCenterX(), r4.getCenterY()));
+   		path.getElements().add(new LineTo(r5.getCenterX(), r5.getCenterY()));
+		path.getElements().add(new LineTo(r6.getCenterX(), r6.getCenterY()));
+   		path.getElements().add(new LineTo(r7.getCenterX(), r7.getCenterY()));
+		path.getElements().add(new LineTo(r8.getCenterX(), r8.getCenterY()));
+
+    		PathTransition pathtransition = new PathTransition(Duration.millis(1000),path,circle);//time,path,object
+    		/*pathtransition.setDuration(Duration.seconds(1));
+    		pathtransition.setNode(circle);
+    		pathtransition.setPath(path);*/
+    		//pathtransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);   	  
+    		pathtransition.play();
 	}
 	public void rootu(){
 		int r = new Random().nextInt(2)+1;
