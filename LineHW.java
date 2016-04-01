@@ -14,12 +14,59 @@ import javafx.animation.*;
 import java.util.*;
 import javafx.event.*;
 //class
+
+
 public class LineHW extends Pane{
 	
 	double x=150;
 	double y=50;
 	public Circle circle=new Circle(x,y,2);
 	Timeline animation;
+	Circle D1 = new Circle(150,60,2);
+
+	Circle D2 = new Circle(140,72,2);
+	Circle D3 = new Circle(160,72,2);
+
+	Circle D4 = new Circle(130,90,2);
+	Circle D5 = new Circle(150,90,2);
+	Circle D6 = new Circle(170,90,2);
+
+	Circle D7 = new Circle(120,108,2);
+	Circle D8 = new Circle(140,108,2);
+	Circle D9 = new Circle(160,108,2);
+	Circle D10 = new Circle(180,108,2);
+
+	Circle D11 = new Circle(110,126,2);
+	Circle D12 = new Circle(130,126,2);
+	Circle D13 = new Circle(150,126,2);
+	Circle D14 = new Circle(170,126,2);
+	Circle D15 = new Circle(190,126,2);
+
+	Circle D16 = new Circle(100,144,2);
+	Circle D17 = new Circle(120,144,2);
+	Circle D18 = new Circle(140,144,2);
+	Circle D19 = new Circle(160,144,2);
+	Circle D20 = new Circle(180,144,2);
+	Circle D21 = new Circle(200,144,2);
+
+	Circle D22 = new Circle(90,162,2);
+	Circle D23 = new Circle(110,162,2);
+	Circle D24 = new Circle(130,162,2);
+	Circle D25 = new Circle(150,162,2);
+	Circle D26 = new Circle(170,162,2);
+	Circle D27 = new Circle(190,162,2);
+	Circle D28 = new Circle(210,162,2);
+
+	Circle D29 = new Circle(80,180,2);
+	Circle D30 = new Circle(100,180,2);
+	Circle D31 = new Circle(120,180,2);
+	Circle D32 = new Circle(140,180,2);
+	Circle D33 = new Circle(160,180,2);
+	Circle D34 = new Circle(180,180,2);
+	Circle D35 = new Circle(200,180,2);
+	Circle D36 = new Circle(220,180,2);	
+	
+	
 
 	public LineHW(){
 		//create line 
