@@ -155,6 +155,12 @@ public class LineHW extends Pane{
     		//pathtransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);   	  
     		pathtransition.play();
 	}
+	public void pplaying(){
+		rootu();	
+		animation1();
+
+	}	
+	
 	public void rootu(){
 		int r = new Random().nextInt(2)+1;
 		r1=D1;
