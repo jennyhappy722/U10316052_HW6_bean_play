@@ -12,7 +12,9 @@ public class Test extends Application{
 
 	@Override
 	public void start(Stage primaryStage){
-		LineHW linehw=new LineHW();
+		LineHW linehw=new LineHW();		
+		linehw.pplaying();
+
 		Scene scene = new Scene(linehw, 300, 300);
     		primaryStage.setTitle("game"); // Set the stage title
     		primaryStage.setScene(scene); // Place the scene in the stage
