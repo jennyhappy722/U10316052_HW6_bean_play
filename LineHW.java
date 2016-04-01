@@ -90,7 +90,7 @@ public class LineHW extends Pane{
 	public void animation1(){
     		// Create an animation for moving the ball
     		Path path = new Path();
-    		path.getElements().add(new MoveTo(circle.getCenterX(),circle.getCenterY()));//起始點
+    		path.getElements().add(new MoveTo(circle.getCenterX(),circle.getCenterY()));
    		path.getElements().add(new LineTo(r1.getCenterX(), r1.getCenterY()));
 		path.getElements().add(new LineTo(r2.getCenterX(), r2.getCenterY()));
    		path.getElements().add(new LineTo(r3.getCenterX(), r3.getCenterY()));
