@@ -68,6 +68,16 @@ public class LineHW extends Pane{
 	Circle D34 = new Circle(180,180,2);
 	Circle D35 = new Circle(200,180,2);
 	Circle D36 = new Circle(220,180,2);
+	
+	Circle D37 = new Circle(80,230,2);
+	Circle D38 = new Circle(100,230,2);
+	Circle D39 = new Circle(120,230,2);
+	Circle D40 = new Circle(140,230,2);
+	Circle D41 = new Circle(160,230,2);
+	Circle D42 = new Circle(180,230,2);
+	Circle D43 = new Circle(200,230,2);
+	Circle D44 = new Circle(220,230,2);	
+	
 	//add path dot
 	Circle r1 = new Circle(150,160,2);
 	Circle r2 = new Circle(120,180,2);
@@ -76,7 +86,8 @@ public class LineHW extends Pane{
 	Circle r5 = new Circle(180,180,2);
 	Circle r6 = new Circle(200,180,2);
 	Circle r7 = new Circle(220,180,2);
-	Circle r8 = new Circle(220,180,2);	
+	Circle r8 = new Circle(220,180,2);
+	Circle r9 = new Circle(220,180,2);
 	
 	
 	//paint shape
@@ -151,6 +162,7 @@ public class LineHW extends Pane{
 		path.getElements().add(new LineTo(r6.getCenterX(), r6.getCenterY()));
    		path.getElements().add(new LineTo(r7.getCenterX(), r7.getCenterY()));
 		path.getElements().add(new LineTo(r8.getCenterX(), r8.getCenterY()));
+		path.getElements().add(new LineTo(r9.getCenterX(), r9.getCenterY()));		
 
     		PathTransition pathtransition = new PathTransition(Duration.millis(1000),path,circle);//time,path,object
 	  
@@ -388,7 +400,42 @@ public class LineHW extends Pane{
 				r8=D35;
 			else
 				r8=D36;
-		}			
+		}
+				//--------------------------------------------------------------r8
+		if(r8==D29){			
+			r9=D37;
+		}
+
+		if(r8==D30){			
+			r9=D38;
+		}
+
+		if(r8==D31){			
+			r9=D39;
+		}
+
+		if(r8==D32){			
+			r9=D40;
+		}
+
+		if(r8==D33){			
+			r9=D41;
+		}
+
+		if(r8==D34){			
+			r9=D42;
+		}
+
+		if(r8==D35){			
+			r9=D43;
+		}
+
+		if(r8==D36){			
+			r9=D44;
+		}
+				
+	
+
 		
 	}
 	//get r location
