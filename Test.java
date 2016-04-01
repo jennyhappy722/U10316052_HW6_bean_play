@@ -16,7 +16,7 @@ public class Test extends Application{
 
 
 		Scene scene = new Scene(linehw, 300, 300);
-    		primaryStage.setTitle("game"); // Set the stage title
+    		primaryStage.setTitle("U10316052game"); // Set the stage title
     		primaryStage.setScene(scene); // Place the scene in the stage
     		scene.setOnMouseClicked(e ->{
 		linehw.rootu();
