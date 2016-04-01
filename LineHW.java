@@ -1,4 +1,5 @@
 //u10316052
+//import package
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.*;
@@ -17,11 +18,13 @@ import javafx.event.*;
 
 
 public class LineHW extends Pane{
-	
+	//start dot location
 	double x=150;
 	double y=50;
+	//start dot
 	public Circle circle=new Circle(x,y,2);
 	Timeline animation;
+	//add path location dot 36
 	Circle D1 = new Circle(150,60,2);
 
 	Circle D2 = new Circle(140,72,2);
@@ -65,6 +68,7 @@ public class LineHW extends Pane{
 	Circle D34 = new Circle(180,180,2);
 	Circle D35 = new Circle(200,180,2);
 	Circle D36 = new Circle(220,180,2);
+	//add path dot
 	Circle r1 = new Circle(150,160,2);
 	Circle r2 = new Circle(120,180,2);
 	Circle r3 = new Circle(140,180,2);
@@ -75,7 +79,7 @@ public class LineHW extends Pane{
 	Circle r8 = new Circle(220,180,2);	
 	
 	
-
+	//paint shape
 	public LineHW(){
 		//create line 
 		Line line=new Line(130,50,130,80);
@@ -134,7 +138,7 @@ public class LineHW extends Pane{
 		getChildren().addAll(circle,line,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28);
 
 	}
-
+	//path animation
 	public void animation1(){
     		// Create an animation for moving the ball
     		Path path = new Path();
@@ -149,10 +153,7 @@ public class LineHW extends Pane{
 		path.getElements().add(new LineTo(r8.getCenterX(), r8.getCenterY()));
 
     		PathTransition pathtransition = new PathTransition(Duration.millis(1000),path,circle);//time,path,object
-    		/*pathtransition.setDuration(Duration.seconds(1));
-    		pathtransition.setNode(circle);
-    		pathtransition.setPath(path);*/
-    		//pathtransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);   	  
+	  
     		pathtransition.play();
 	}
 	public void pplaying(){
@@ -160,7 +161,7 @@ public class LineHW extends Pane{
 		animation1();
 
 	}	
-	
+	//path random
 	public void rootu(){
 		int r = new Random().nextInt(2)+1;
 		r1=D1;
@@ -390,43 +391,43 @@ public class LineHW extends Pane{
 		}			
 		
 	}
-
+	//get r location
 	public Circle getr1(){
 
 		return r1;
 	}
-
+	//get r location
 	public Circle getr2(){
 
 		return r2;
 	}
 
-
+	//get r location
 	public Circle getr3(){
 
 		return r3;
 	}
-
+	//get r location
 	public Circle getr4(){
 
 		return r4;
 	}
-
+	//get r location
 	public Circle getr5(){
 
 		return r5;
 	}
-
+	//get r location
 	public Circle getr6(){
 
 		return r6;
 	}
-
+	//get r location
 	public Circle getr7(){
 
 		return r7;
 	}
-
+	//get r location
 	public Circle getr8(){
 
 		return r8;
