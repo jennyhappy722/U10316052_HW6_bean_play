@@ -64,7 +64,15 @@ public class LineHW extends Pane{
 	Circle D33 = new Circle(160,180,2);
 	Circle D34 = new Circle(180,180,2);
 	Circle D35 = new Circle(200,180,2);
-	Circle D36 = new Circle(220,180,2);	
+	Circle D36 = new Circle(220,180,2);
+	Circle r1 = new Circle(150,160,2);
+	Circle r2 = new Circle(120,180,2);
+	Circle r3 = new Circle(140,180,2);
+	Circle r4 = new Circle(160,180,2);
+	Circle r5 = new Circle(180,180,2);
+	Circle r6 = new Circle(200,180,2);
+	Circle r7 = new Circle(220,180,2);
+	Circle r8 = new Circle(220,180,2);	
 	
 	
 
@@ -120,14 +128,7 @@ public class LineHW extends Pane{
 
 		Ellipse e28=new Ellipse(150,72,5,5);
 		
-		Circle r1 = new Circle(150,160,2);
-		Circle r2 = new Circle(120,180,2);
-		Circle r3 = new Circle(140,180,2);
-		Circle r4 = new Circle(160,180,2);
-		Circle r5 = new Circle(180,180,2);
-		Circle r6 = new Circle(200,180,2);
-		Circle r7 = new Circle(220,180,2);
-		Circle r8 = new Circle(220,180,2);		
+		
 
 		//add to pane
 		getChildren().addAll(circle,line,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28);
