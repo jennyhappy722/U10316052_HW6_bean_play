@@ -22,7 +22,7 @@ public class LineHW extends Pane{
 	double x=150;
 	double y=50;
 	//start dot
-	public Circle circle=new Circle(x,y,2);
+	public Circle circle;
 	Timeline animation;
 	//add path location dot 36
 	Circle D1 = new Circle(150,60,2);
@@ -146,12 +146,14 @@ public class LineHW extends Pane{
 		
 
 		//add to pane
-		getChildren().addAll(circle,line,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28);
+		getChildren().addAll(line,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28);
 
 	}
 	//path animation
 	public void animation1(){
     		// Create an animation for moving the ball
+    		circle=new Circle(x,y,2);
+    		
     		Path path = new Path();
     		path.getElements().add(new MoveTo(circle.getCenterX(),circle.getCenterY()));
    		path.getElements().add(new LineTo(r1.getCenterX(), r1.getCenterY()));
@@ -479,6 +481,15 @@ public class LineHW extends Pane{
 
 		return r8;
 	}
+	public Circle getr9(){
+
+		return r9;
+	}
+	public Circle getcircle(){
+
+		return circle;
+	}
+
 
 
 }
