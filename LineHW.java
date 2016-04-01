@@ -150,26 +150,29 @@ public class LineHW extends Pane{
 
 	}
 	//path animation
-	public void animation1(){
+	public void animation1(Circle circle,Circle Dots1 ,Circle Dots2,Circle Dots3,Circle Dots4,Circle Dots5,Circle Dots6,Circle Dots7,Circle Dots8,Circle Dots9){
     		// Create an animation for moving the ball
-    		circle=new Circle(x,y,2);
-    		
+		circle=new Circle(x,y,2);
     		Path path = new Path();
     		path.getElements().add(new MoveTo(circle.getCenterX(),circle.getCenterY()));
-   		path.getElements().add(new LineTo(r1.getCenterX(), r1.getCenterY()));
-		path.getElements().add(new LineTo(r2.getCenterX(), r2.getCenterY()));
-   		path.getElements().add(new LineTo(r3.getCenterX(), r3.getCenterY()));
-		path.getElements().add(new LineTo(r4.getCenterX(), r4.getCenterY()));
-   		path.getElements().add(new LineTo(r5.getCenterX(), r5.getCenterY()));
-		path.getElements().add(new LineTo(r6.getCenterX(), r6.getCenterY()));
-   		path.getElements().add(new LineTo(r7.getCenterX(), r7.getCenterY()));
-		path.getElements().add(new LineTo(r8.getCenterX(), r8.getCenterY()));
-		path.getElements().add(new LineTo(r9.getCenterX(), r9.getCenterY()));		
-
+   		path.getElements().add(new LineTo(Dots1.getCenterX(), Dots1.getCenterY()));
+		path.getElements().add(new LineTo(Dots2.getCenterX(), Dots2.getCenterY()));
+   		path.getElements().add(new LineTo(Dots3.getCenterX(), Dots3.getCenterY()));
+		path.getElements().add(new LineTo(Dots4.getCenterX(), Dots4.getCenterY()));
+   		path.getElements().add(new LineTo(Dots5.getCenterX(), Dots5.getCenterY()));
+		path.getElements().add(new LineTo(Dots6.getCenterX(), Dots6.getCenterY()));
+   		path.getElements().add(new LineTo(Dots7.getCenterX(), Dots7.getCenterY()));
+		path.getElements().add(new LineTo(Dots8.getCenterX(), Dots8.getCenterY()));
+		path.getElements().add(new LineTo(Dots9.getCenterX(), Dots9.getCenterY()));
+		getChildren().addAll(circle);
     		PathTransition pathtransition = new PathTransition(Duration.millis(1000),path,circle);//time,path,object
-	  
+    		/*pathtransition.setDuration(Duration.seconds(1));
+    		pathtransition.setNode(circle);
+    		pathtransition.setPath(path);*/
+    		//pathtransition.setOrientation(OrientationType.ORTHOGONAL_TO_TANGENT);   	  
     		pathtransition.play();
 	}
+
 	public void pplaying(){
 		rootu();	
 		animation1();
