@@ -69,14 +69,14 @@ public class LineHW extends Pane{
 	Circle D35 = new Circle(200,180,2);
 	Circle D36 = new Circle(220,180,2);
 	
-	Circle D37 = new Circle(80,230,2);
-	Circle D38 = new Circle(100,230,2);
-	Circle D39 = new Circle(120,230,2);
-	Circle D40 = new Circle(140,230,2);
-	Circle D41 = new Circle(160,230,2);
-	Circle D42 = new Circle(180,230,2);
-	Circle D43 = new Circle(200,230,2);
-	Circle D44 = new Circle(220,230,2);	
+	Circle D37 = new Circle(80,238,2);
+	Circle D38 = new Circle(100,238,2);
+	Circle D39 = new Circle(120,238,2);
+	Circle D40 = new Circle(140,238,2);
+	Circle D41 = new Circle(160,238,2);
+	Circle D42 = new Circle(180,238,2);
+	Circle D43 = new Circle(200,238,2);
+	Circle D44 = new Circle(220,238,2);	
 	
 	//add path dot
 	Circle r1 = new Circle(150,160,2);
@@ -88,7 +88,14 @@ public class LineHW extends Pane{
 	Circle r7 = new Circle(220,180,2);
 	Circle r8 = new Circle(220,180,2);
 	Circle r9 = new Circle(220,180,2);
-	
+	int a=0;
+	int b=0;
+	int c=0;
+	int d=0;
+	int e=0;
+	int f=0;
+	int g=0;
+	int h=0;	
 	
 	//paint shape
 	public LineHW(){
@@ -405,34 +412,83 @@ public class LineHW extends Pane{
 				//--------------------------------------------------------------r8
 		if(r8==D29){			
 			r9=D37;
+			a++;
+			while(a<29){//(238-180)/2
+			if(a!=0)
+				D37.setCenterY(D37.getCenterY()-2);
+			break;
+			}	
 		}
 
 		if(r8==D30){			
 			r9=D38;
+			b++;
+			while(b<29){//(238-180)/2
+			if(b!=0)
+				D38.setCenterY(D38.getCenterY()-2);
+			break;
+			}			
 		}
 
 		if(r8==D31){			
 			r9=D39;
+			c++;
+			while(c<29){//(238-180)/2
+			if(c!=0)
+				D39.setCenterY(D39.getCenterY()-2);
+			break;
+			}			
 		}
 
 		if(r8==D32){			
 			r9=D40;
+			d++;
+			while(d<29){//(238-180)/2
+			if(d!=0)
+				D40.setCenterY(D40.getCenterY()-2);
+			break;
+			}
+
 		}
 
 		if(r8==D33){			
 			r9=D41;
+			e++;
+			while(e<29){//(238-180)/2
+			if(e!=0)
+				D41.setCenterY(D41.getCenterY()-2);
+			break;
+			}			
 		}
 
 		if(r8==D34){			
 			r9=D42;
+			f++;
+			while(f<29){//(238-180)/2
+			if(f!=0)
+				D42.setCenterY(D42.getCenterY()-2);
+			break;
+			}			
 		}
 
 		if(r8==D35){			
 			r9=D43;
+			g++;
+			while(g<29){//(238-180)/2
+			if(g!=0)
+				D43.setCenterY(D43.getCenterY()-2);
+			break;
+			}			
 		}
 
 		if(r8==D36){			
 			r9=D44;
+			h++;
+			while(h<29){//(238-180)/2
+			if(h!=0)
+				D44.setCenterY(D44.getCenterY()-2);
+			break;
+			}			
 		}
 				
 	
