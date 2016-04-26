@@ -4,17 +4,11 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.scene.shape.*;
 import javafx.util.*;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.beans.binding.Bindings;
-import javafx.beans.property.*;
-import javafx.beans.value.WritableObjectValue;
 import javafx.animation.*;
 import java.util.*;
 import javafx.event.*;
 public class LineHW extends Pane{//class
-	double x=150;//start dot location
-	double y=50;
+	double x=150,y=50;//start dot location
 	public Circle circle;//start dot
 	Timeline animation;
 	Circle D1 = new Circle(150,60,2);//add path location dot 36
@@ -70,14 +64,7 @@ public class LineHW extends Pane{//class
 	Circle r7 = new Circle(220,180,2);
 	Circle r8 = new Circle(220,180,2);
 	Circle r9 = new Circle(220,180,2);
-	int a=0;
-	int b=0;
-	int c=0;
-	int d=0;
-	int e=0;
-	int f=0;
-	int g=0;
-	int h=0;	
+	int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
 	public LineHW(){
 		Line line=new Line(130,50,130,80);//create line 
 		Line line1=new Line(170,50,170,80);
@@ -121,7 +108,6 @@ public class LineHW extends Pane{//class
 		Ellipse e26=new Ellipse(140,90,5,5);
 		Ellipse e27=new Ellipse(160,90,5,5);
 		Ellipse e28=new Ellipse(150,72,5,5);
-		//add to pane
 		getChildren().addAll(line,line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11,line12,line13,e1,e2,e3,e4,e5,e6,e7,e8,e9,e10,e11,e12,e13,e14,e15,e16,e17,e18,e19,e20,e21,e22,e23,e24,e25,e26,e27,e28);
 	}
 	public void animation1(Circle circle,Circle Dots1 ,Circle Dots2,Circle Dots3,Circle Dots4,Circle Dots5,Circle Dots6,Circle Dots7,Circle Dots8,Circle Dots9){
@@ -142,274 +128,154 @@ public class LineHW extends Pane{//class
     		pathtransition.play();
 	}
 	public void rootu(){//path random
-		int r = new Random().nextInt(2)+1;
 		r1=D1;
-		//---------------------------------------------------------------------r1
-		if(r==2)
-			r2=D2;
-		else
-			r2=D3;
-		//---------------------------------------------------------------------r2
-		if(r2==D2){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r3=D4;
-			else
-				r3=D5;
+		if(new Random().nextInt(2)+1==2)r2=D2;//---------------------------------------------------------------------r1
+		else r2=D3;
+		if(r2==D2){//---------------------------------------------------------------------r2
+			if(new Random().nextInt(2)+1==2)r3=D4;
+			else r3=D5;
 		}
-
 		if(r2==D3){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r3=D5;
-			else
-				r3=D6;
+			if(new Random().nextInt(2)+1==2)r3=D5;
+			else r3=D6;
 		}
-
-		//---------------------------------------------------------------------r3
-		if(r3==D4){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r4=D7;
-			else
-				r4=D8;
+		if(r3==D4){//---------------------------------------------------------------------r3
+			if(new Random().nextInt(2)+1==2)r4=D7;
+			else r4=D8;
 		}
 		if(r3==D5){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r4=D9;
-			else
-				r4=D8;
+			if(new Random().nextInt(2)+1==2)r4=D9;
+			else r4=D8;
 		}
 		if(r3==D6){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r4=D9;
-			else
-				r4=D10;
+			if(new Random().nextInt(2)+1==2)r4=D9;
+			else r4=D10;
 		}
-		//---------------------------------------------------------------------r4
-		if(r4==D7){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r5=D11;
-			else
-				r5=D12;
+		if(r4==D7){//---------------------------------------------------------------------r4
+			if(new Random().nextInt(2)+1==2)r5=D11;
+			else r5=D12;
 		}
-
 		if(r4==D8){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r5=D13;
-			else
-				r5=D12;
+			if(new Random().nextInt(2)+1==2)r5=D13;
+			else r5=D12;
 		}
-
 		if(r4==D9){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r5=D13;
-			else
-				r5=D14;
+			if(new Random().nextInt(2)+1==2)r5=D13;
+			else r5=D14;
 		}
-
 		if(r4==D10){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r5=D14;
-			else
-				r5=D15;
+			if(new Random().nextInt(2)+1==2)r5=D14;
+			else r5=D15;
 		}
-		//---------------------------------------------------------------------r5
-		if(r5==D11){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r6=D16;
-			else
-				r6=D17;
+		if(r5==D11){//---------------------------------------------------------------------r5
+			if(=new Random().nextInt(2)+1=2)r6=D16;
+			else r6=D17;
 		}
-
 		if(r5==D12){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r6=D18;
-			else
-				r6=D17;
+			if(new Random().nextInt(2)+1==2)r6=D18;
+			else r6=D17;
 		}
-
 		if(r5==D13){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r6=D18;
-			else
-				r6=D19;
+			if(new Random().nextInt(2)+1==2)r6=D18;
+			else r6=D19;
 		}
-
 		if(r5==D14){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r6=D19;
-			else
-				r6=D20;
+			if(new Random().nextInt(2)+1==2)r6=D19;
+			else r6=D20;
 		}
-
 		if(r5==D15){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r6=D20;
-			else
-				r6=D21;
+			if(new Random().nextInt(2)+1==2)r6=D20;
+			else r6=D21;
 		}
-		
-		//---------------------------------------------------------------------r6
-		if(r6==D16){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r7=D22;
-			else
-				r7=D23;
+		if(r6==D16){//---------------------------------------------------------------------r6
+			if(new Random().nextInt(2)+1==2)r7=D22;
+			else r7=D23;
 		}
-
 		if(r6==D17){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r7=D24;
-			else
-				r7=D23;
+			if(new Random().nextInt(2)+1==2)r7=D24;
+			else r7=D23;
 		}	
-
 		if(r6==D18){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r7=D24;
-			else
-				r7=D25;
+			if(new Random().nextInt(2)+1==2)r7=D24;
+			else r7=D25;
 		}	
-
 		if(r6==D19){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r7=D25;
-			else
-				r7=D26;
+			if(new Random().nextInt(2)+1==2)r7=D25;
+			else r7=D26;
 		}	
-
 		if(r6==D20){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r7=D26;
-			else
-				r7=D27;
+			if(new Random().nextInt(2)+1==2)r7=D26;
+			else r7=D27;
 		}	
-
 		if(r6==D21){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r7=D27;
-			else
-				r7=D28;
+			if(new Random().nextInt(2)+1==2)r7=D27;
+			else r7=D28;
 		}
-		//---------------------------------------------------------------------r7
-		if(r7==D22){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D29;
-			else
-				r8=D30;
+		if(r7==D22){//---------------------------------------------------------------------r7
+			if(new Random().nextInt(2)+1==2)r8=D29;
+			else r8=D30;
 		}
 		if(r7==D23){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D31;
-			else
-				r8=D30;
+			if(new Random().nextInt(2)+1==2)r8=D31;
+			else r8=D30;
 		}
-
 		if(r7==D24){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D31;
-			else
-				r8=D32;
+			if(new Random().nextInt(2)+1==2)r8=D31;
+			else r8=D32;
 		}
 		if(r7==D25){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D32;
-			else
-				r8=D33;
+			if(new Random().nextInt(2)+1==2)r8=D32;
+			else r8=D33;
 		}
-
 		if(r7==D26){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D33;
-			else
-				r8=D34;
+			if(new Random().nextInt(2)+1==2)r8=D33;
+			else r8=D34;
 		}
-
 		if(r7==D27){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D35;
-			else
-				r8=D34;
+			if(new Random().nextInt(2)+1==2)r8=D35;
+			else r8=D34;
 		}
 		if(r7==D28){
-			r = new Random().nextInt(2)+1;
-			if(r==2)
-				r8=D35;
-			else
-				r8=D36;
+			if(new Random().nextInt(2)+1==2)r8=D35;
+			else r8=D36;
 		}
-		//--------------------------------------------------------------r8
-		if(r8==D29){			
+		if(r8==D29){//--------------------------------------------------------------r8			
 			r9=D37;
 			a++;
 			while(a<29){//(238-180)/2
-			if(a!=0)
-				D37.setCenterY(D37.getCenterY()-2);
+			if(a!=0)D37.setCenterY(D37.getCenterY()-2);
 			break;
 			}	
 		}
-
 		if(r8==D30){			
 			r9=D38;
 			b++;
 			while(b<29){//(238-180)/2
-			if(b!=0)
-				D38.setCenterY(D38.getCenterY()-2);
+			if(b!=0)D38.setCenterY(D38.getCenterY()-2);
 			break;
 			}			
 		}
-
 		if(r8==D31){			
 			r9=D39;
 			c++;
 			while(c<29){//(238-180)/2
-			if(c!=0)
-				D39.setCenterY(D39.getCenterY()-2);
+			if(c!=0)D39.setCenterY(D39.getCenterY()-2);
 			break;
 			}			
 		}
-
 		if(r8==D32){			
 			r9=D40;
 			d++;
 			while(d<29){//(238-180)/2
-			if(d!=0)
-				D40.setCenterY(D40.getCenterY()-2);
+			if(d!=0)D40.setCenterY(D40.getCenterY()-2);
 			break;
 			}
-
 		}
-
 		if(r8==D33){			
 			r9=D41;
 			e++;
 			while(e<29){//(238-180)/2
-			if(e!=0)
-				D41.setCenterY(D41.getCenterY()-2);
+			if(e!=0)D41.setCenterY(D41.getCenterY()-2);
 			break;
 			}			
 		}
@@ -417,8 +283,7 @@ public class LineHW extends Pane{//class
 			r9=D42;
 			f++;
 			while(f<29){//(238-180)/2
-			if(f!=0)
-				D42.setCenterY(D42.getCenterY()-2);
+			if(f!=0)D42.setCenterY(D42.getCenterY()-2);
 			break;
 			}			
 		}
@@ -426,8 +291,7 @@ public class LineHW extends Pane{//class
 			r9=D43;
 			g++;
 			while(g<29){//(238-180)/2
-			if(g!=0)
-				D43.setCenterY(D43.getCenterY()-2);
+			if(g!=0)D43.setCenterY(D43.getCenterY()-2);
 			break;
 			}			
 		}
@@ -435,8 +299,7 @@ public class LineHW extends Pane{//class
 			r9=D44;
 			h++;
 			while(h<29){//(238-180)/2
-			if(h!=0)
-				D44.setCenterY(D44.getCenterY()-2);
+			if(h!=0)D44.setCenterY(D44.getCenterY()-2);
 			break;
 			}			
 		}
